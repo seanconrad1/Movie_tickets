@@ -19,19 +19,11 @@ ActiveRecord::Schema.define(version: 2018_07_25_202941) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "seats", force: :cascade do |t|
-    t.string "seat_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tickets", force: :cascade do |t|
-    t.integer "seat_id"
     t.integer "movie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["movie_id"], name: "index_tickets_on_movie_id"
-    t.index ["seat_id"], name: "index_tickets_on_seat_id"
   end
 
 end

@@ -12,7 +12,15 @@ class MoviesController < ApplicationController
   end
 
   def create
-    #code
+    @movie = Movie.create(movie_params)
+    redirect_to movies_path
+  end
+
+
+
+private
+  def movie_params
+    params.require(:movie).permit(:name, :year)
   end
 
 
