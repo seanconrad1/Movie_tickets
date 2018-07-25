@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  seat: one
+  movie: one
+
+two:
+  seat: two
+  movie: two
