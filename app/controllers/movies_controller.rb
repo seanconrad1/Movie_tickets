@@ -18,6 +18,7 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
+    @tickets = Ticket.all
     render :show
   end
 
@@ -30,6 +31,10 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.update(movie_params)
     redirect_to movie_path(@movie)
+  end
+
+  def destroy
+    #code
   end
 
 private

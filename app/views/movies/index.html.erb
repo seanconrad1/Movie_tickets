@@ -1,5 +1,5 @@
 <h1>MOVIES</h1>
 
 <% @movies.each do |movie| %><br>
-<%= movie.name  %> | <%= movie.year %><br>
+<%= link_to movie.name, movie %> | <%= movie.year %><br>
 <% end %>

@@ -1,2 +1,16 @@
 <h1><%= @movie.name %></h1>
 <h2><%= @movie.year %></h2>
+
+Seat has been taken: <% ticket_numbers = @tickets.select do |ticket| %>
+                  <% ticket.movie_id == @movie.id %>
+                  <% end %>
+                  <% ticket_numbers.each do |t| %>
+                    <%= t.id %>
+                  <% end %><br>
+
+
+<%= link_to "Edit", edit_movie_path(@movie) %>
+
+<%= link_to "New Ticket", new_ticket_path %>
+
+<%= link_to "All Movies", movies_path %>

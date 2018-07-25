@@ -1,0 +1,9 @@
+<h1>Create TICKET</h1>
+
+<%= form_for @ticket do |f| %>
+
+  <%= f.label "Movie_id" %>
+  <%= f.number_field :movie_id %>
+
+  <%= f.submit %>
+<% end %>
